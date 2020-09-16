@@ -16,5 +16,6 @@ public class MrLawrencApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        log.info("doc url:http://localhost/swagger-ui.html");
     }
 }
