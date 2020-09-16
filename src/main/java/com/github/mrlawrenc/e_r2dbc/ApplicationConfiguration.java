@@ -41,6 +41,7 @@ public class ApplicationConfiguration extends AbstractR2dbcConfiguration {
         //配置3 池化(1.设置连接工工厂参数  2.设置连接池配置  3.创建连接池)
         ConnectionFactory connectionFactory = ConnectionFactories.get(builder()
                 .option(DRIVER, "pool")
+                //如果是pgsql 只需将mysql更改为postgresql即可
                 .option(PROTOCOL, "mysql")
                 .option(HOST, "localhost")
                 .option(PORT, 3306)
