@@ -107,6 +107,26 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
+        <!--nacos服务提供者-->
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
+        <!--如果作为消费者还需要在服务者基础上引入feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -117,12 +137,12 @@
             </plugin>
         </plugins>
     </build>
-<!--    &lt;!&ndash;swagger.version目前是3.0.0-SNAPSHOT，因而没有发布到maven官方仓库里头，需要从jcenter-snapshots中拉取&ndash;&gt;
-    <repositories>
-        <repository>
-            <id>jcenter-snapshots</id>
-            <name>jcenter</name>
-            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
-        </repository>
-    </repositories>-->
+    <!--    &lt;!&ndash;swagger.version目前是3.0.0-SNAPSHOT，因而没有发布到maven官方仓库里头，需要从jcenter-snapshots中拉取&ndash;&gt;
+        <repositories>
+            <repository>
+                <id>jcenter-snapshots</id>
+                <name>jcenter</name>
+                <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+            </repository>
+        </repositories>-->
 </project>

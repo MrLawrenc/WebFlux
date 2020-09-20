@@ -1,6 +1,6 @@
 server:
   port: 80
 
-#logging:
-#  level:
-#    root: warn
+spring:
+  profiles:
+    active: dev
